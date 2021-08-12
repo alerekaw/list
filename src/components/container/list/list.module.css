@@ -1,0 +1,22 @@
+.list{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    min-height: 600px;
+    width: 400px;
+    background-color: lavender;
+    border-radius: 20px;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-family: 'Kalam', cursive;
+    font-size: 20px;
+    box-shadow: 5px 5px 10px darkslategray;
+}
+.button{
+    text-align: center;
+    border: solid red;
+    background-color: white;
+}
