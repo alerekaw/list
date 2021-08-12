@@ -22,3 +22,8 @@
     color: white;
     margin-top: 10px;
 }
+.button:hover{
+    background-color:lime;
+    border: solid 3px lime;
+    color:white;
+}
