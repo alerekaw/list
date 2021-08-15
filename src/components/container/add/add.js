@@ -1,14 +1,29 @@
 import React from 'react';
 import styles from './add.module.css';
+import {useRef} from 'react';
+
 
 function Add(){
+    var value= useRef()
+   
+    const addItem = () =>{
+        var key = localStorage.length + 1
+            window.localStorage.setItem(key, value.current.value)
+        
+    }
     return (
         <div>
             <div>
             <input 
-            className={styles.input}/></div>
+            placeholder="Type an item..."
+            className={styles.input}
+            type="text"
+            ref={value}
+            /></div>
             <div>
-            <button className={styles.button}> Add item </button>
+            <button 
+                onClick={addItem}
+                className={styles.button}> Add product </button>
             </div>
         </div>
     )
