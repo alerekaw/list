@@ -7,13 +7,35 @@ const List = () => {
     const [itemsList, setItemsList] = useState([]);
     const [ userInput, setUserInput ] = useState();
     useEffect(() => {
-        setItemsList(["phone"]);
+        setItemsList([{
+            "id": 1,
+            "task": "iphone",
+            "complete": true
+          },
+          {"id": 2,
+          "task": "czekolada",
+          "complete": true},
+          {"id": 3,
+          "task": "jajka",
+          "complete": true},
+          {"id": 4,
+          "task": "majtki",
+          "complete": true},
+          {"id": 5,
+          "task": "skrarpety",
+          "complete": true},
+          {"id": 6,
+          "task": "antyperspirant dla Sebusia",
+          "complete": true},
+        ]);
 
     }, [])
      
     const addItem = (e) =>{
         let copy = [...itemsList]
-        copy = [...copy, userInput]
+        copy = [...copy, {"id": copy.length-1,
+                        "task": userInput,
+                        "complete": false}]
         setItemsList(copy);
      }
 
@@ -23,9 +45,22 @@ const List = () => {
 
     const deleteItem = (e) =>{
         let copy = [...itemsList]
-        const index = copy.indexOf(e.currentTarget.id)
+        const index = e.currentTarget.id
         if (index > -1) {copy.splice(index, 1)}
         setItemsList(copy);
+    }
+
+    
+    const handleClick = (e) => {
+        e.preventDefault()
+        handleToggle(e.currentTarget.id)
+    }
+
+    const handleToggle = (id) => {
+        let mapped = itemsList.map(item => {
+            return item.id === Number(id) ? {...item, complete: !item.complete} : {...item};
+        })
+        setItemsList(mapped);
     }
 
     return (
@@ -48,9 +83,11 @@ const List = () => {
     
         <ul className={styles.list}>
             {itemsList.map((el, idx) => (
-                <li key={idx}> 
-                <button>
-             x </button> {el}  <button id={el} onClick={deleteItem}>Delete</button></li>
+                <li key={idx} className={!el.complete ? styles.strike : ""}> 
+                <button id={el.id} onClick={handleClick}>
+                x </button> 
+                {el.task}  
+                <button id={idx} onClick={deleteItem}>Delete</button></li>
             ))}
            
 </ul>
