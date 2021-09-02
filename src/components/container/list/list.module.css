@@ -1,0 +1,45 @@
+.list{
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    min-height: 600px;
+    width: 400px;
+    background-color: lavender;
+    border-radius: 20px;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-family: 'Kalam', cursive;
+    color: darkslategray;
+    box-shadow: 5px 5px 10px darkslategray;
+    list-style: none;
+
+}
+.complete{
+    border: 2px solid mediumseagreen;
+    background-color: white;
+    height: 35px;
+    width: 35px;
+    margin-bottom: 10px;
+    color:mediumseagreen;
+    margin-right: 5px;
+}
+.complete:hover{
+    background-color:mediumseagreen;
+    color: white;
+}
+.delete{
+    border: 2px solid coral;
+    background-color: white;
+    height: 35px;
+    width: 35px;
+    color:coral;
+    margin-right: 10px;
+}
+.delete:hover{
+    background-color:coral;
+    color: white;
+}
+.strike{
+    text-decoration: line-through;
+}

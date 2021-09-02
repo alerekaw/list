@@ -1,0 +1,24 @@
+.input {
+    height: 30px;
+    min-width: 450px;
+    border: solid 2px slategray;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.button {
+    background-color: mediumseagreen;
+    border: solid 2px mediumseagreen;
+    border-radius: 30px;
+    font-size: 25px;
+    padding: 10px 20px 10px 20px;
+    margin-top: 10px;
+    color:white;
+}
+.button:hover {
+    background-color: mediumaquamarine;
+    border: solid 2px mediumaquamarine;
+}
+.button:active {
+    box-shadow: inset 0px 0px 40px seagreen;
+    border: solid 2px mediumseagreen;
+}
