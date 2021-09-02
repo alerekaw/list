@@ -1,9 +1,9 @@
-import './App.css';
+import styles from './variables.module.css';
 import Container from './components/container/container';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <div className={styles.App}>
       <Container />
     </div>
   );

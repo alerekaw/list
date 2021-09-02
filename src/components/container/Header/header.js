@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './header.module.css';
 
-function Header() {
+const Header = () => {
     return (
         <header className={styles.header}>
-           Shopping list
+            Shopping list
         </header>
     );
 }

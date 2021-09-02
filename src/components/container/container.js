@@ -3,7 +3,8 @@ import Header from './Header/header';
 import List from './list/list';
 import styles from './container.module.css';
 
-function Container() {
+const Container = () => {
+  
   return (
     <div className={styles.Container}>
       <Header />

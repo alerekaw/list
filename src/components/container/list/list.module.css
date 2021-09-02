@@ -1,7 +1,5 @@
 .list{
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    margin: auto;
     margin-top: 30px;
     margin-bottom: 20px;
     min-height: 600px;
@@ -12,22 +10,34 @@
     padding-left: 20px;
     padding-top: 20px;
     font-family: 'Kalam', cursive;
-    font-size: 20px;
+    color: darkslategray;
     box-shadow: 5px 5px 10px darkslategray;
+    list-style: none;
+
 }
-.button{
-    text-align: center;
-    border: 2px solid green;
+.complete{
+    border: 2px solid mediumseagreen;
     background-color: white;
     height: 35px;
     width: 35px;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Kalam', cursive;
-    color:green;
+    margin-bottom: 10px;
+    color:mediumseagreen;
+    margin-right: 5px;
 }
-.button:hover{
-    background-color: green;
+.complete:hover{
+    background-color:mediumseagreen;
+    color: white;
+}
+.delete{
+    border: 2px solid coral;
+    background-color: white;
+    height: 35px;
+    width: 35px;
+    color:coral;
+    margin-right: 10px;
+}
+.delete:hover{
+    background-color:coral;
     color: white;
 }
 .strike{
